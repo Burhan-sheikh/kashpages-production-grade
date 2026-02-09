@@ -1,0 +1,48 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+yarn-error.log*
+
+# Testing
+coverage/
+.nyc_output
+*.lcov
+
+# Production
+build/
+dist/
+.next/
+out/
+
+# Environment Variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*.local
+
+# Firebase
+.firebase/
+firebase-debug.log
+firebaserc
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Misc
+.vercel
+.turbo
+*.tsbuildinfo
+next-env.d.ts
