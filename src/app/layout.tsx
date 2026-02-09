@@ -1,18 +1,19 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import localFont from 'next/font/local'
+import { Inter, Plus_Jakarta_Sans } from 'next/font/google'
 import './globals.css'
 import { Toaster } from 'sonner'
 
 const inter = Inter({ 
   subsets: ['latin'],
   variable: '--font-inter',
+  display: 'swap',
 })
 
-const calSans = localFont({
-  src: './fonts/CalSans-SemiBold.woff2',
-  variable: '--font-cal',
-  weight: '600',
+const plusJakarta = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  variable: '--font-display',
+  weight: ['600', '700', '800'],
+  display: 'swap',
 })
 
 export const metadata: Metadata = {
@@ -51,7 +52,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${calSans.variable}`}>
+    <html lang="en" className={`${inter.variable} ${plusJakarta.variable}`}>
       <body className="antialiased">
         {children}
         <Toaster position="top-right" richColors />
